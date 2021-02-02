@@ -1,0 +1,16 @@
+{
+  "generator-easy-ui5": {
+    "projectname": "postmanTut",
+    "namespace": "qldh",
+    "platform": "Static webserver",
+    "viewtype": "XML",
+    "viewname": "MainView",
+    "ui5libs": "Local resources (SAPUI5)",
+    "newdir": true,
+    "namespaceURI": "qldh",
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}
