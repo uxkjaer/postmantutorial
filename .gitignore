@@ -1,11 +1,7 @@
-node_modules/
-.idea/
-.mta/
-*.mtar
-dist/
-package-lock.json
-mta_archives/
-deployer/resources/
-Makefile*
-mta-*
-approuter/*/webapp/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+#production
+/dist

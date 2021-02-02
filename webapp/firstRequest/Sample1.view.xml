@@ -1,0 +1,24 @@
+<mvc:View
+	controllerName="luigi.demo.sample1.Sample1"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.f"
+	displayBlock="true">
+	<App id="app">
+		<Page class="sapUiMediumMargin" title="Create Your First API request">
+			<content>
+				<VBox>
+				<Text text="1. Open up Postman and click the Create a request in the wizard or simply press the + if you've already shut that down" class="sapUiTinyMarginBottom" />	
+				<Image src="./assets/createRequest.PNG" class="sapUiTinyMarginBottom"/>
+				<Text text="2. Add the following URL: https://jsonplaceholder.typicode.com/posts/1 and press the Send Button" class="sapUiTinyMarginBottom" />	
+				<Image src="./assets/sendRequest.PNG" class="sapUiTinyMarginBottom"/>
+				<Text text="3. Paste the body of the result below" class="sapUiTinyMarginBottom" />	
+				<TextArea id="myText" width="100%" rows="5" class="sapUiTinyMarginBottom" />
+				<Button text="Validate Result" press="onValidate" class="sapUiTinyMarginBottom" />
+				<MessageStrip text="Success" showIcon="true" 	type="Success" visible="false" id="success" />
+				<MessageStrip text="Fail, try again" showIcon="true" type="Error" visible="false" id="failure" />
+				</VBox>
+			</content>
+		</Page>
+	</App>
+</mvc:View>
