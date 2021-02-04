@@ -13,7 +13,7 @@
 					<Title  class="sapUiSmallMargin" titleStyle="H4" text="Download and install Postman from below link to get started." wrapping="true" />
 				</f:content>
 			</f:Card>
-			<Image id="download" src="../common/assets/download.PNG" class="sapUiTinyMarginBottom" press="onDownload" />
+			<Image id="download" src="../common/assets/download.PNG" class="sapUiTinyMarginBottom" press="onDownload" alt="Download here"/>
 		</VBox>
 	</App>
 </mvc:View>
