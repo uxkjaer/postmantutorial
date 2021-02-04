@@ -2,7 +2,22 @@
 	xmlns="sap.m"
 	xmlns:core="sap.ui.core">
 	<VBox>
+		<Text text="1. Press the test tab" class="sapUiTinyMarginBottom" />	
+		<Image src="./assets/testTab.PNG" class="sapUiTinyMarginBottom"/>
+		<Text text="2. Using the SNIPPETS, we will add a few tests, find and clicn the 'Status code: Code is 200'" class="sapUiTinyMarginBottom" />	
+		<Image src="./assets/200.PNG" class="sapUiTinyMarginBottom"/>
+		<Text text="3. Click the Response time is less than 200" class="sapUiTinyMarginBottom" />	
+		<MessageStrip text="The pm.test is PostMan's own test API, which we can use to create tests" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
 
+		<Text text="4. Click the Response body: JSON value check" class="sapUiTinyMarginBottom" />
+		<MessageStrip text="pm.response is PostMan's API to get the response that you see after you click the Send" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+	
+		<Text text="5. Give this test a decent name instead of Your test name" class="sapUiTinyMarginBottom" />	
+		<Text text="6. Rename jsonData.value to jsonData.id and the 100 to 1" class="sapUiTinyMarginBottom" />
+		<Image src="./assets/id.PNG" class="sapUiTinyMarginBottom"/>
+		<MessageStrip text="The jsonData is a representation of the response body, so jsonData.id points to this value" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+		<Image src="./assets/value.PNG" class="sapUiTinyMarginBottom"/>
+		<Button text="Done" type="Accept" press="onValidateStep1" class="sapUiLargeMarginBottom" />
 
     </VBox>
 </core:FragmentDefinition>

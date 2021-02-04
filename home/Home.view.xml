@@ -1,17 +1,14 @@
 <mvc:View
 	controllerName="luigi.demo.home.Home"
 	xmlns="sap.m"
-	xmlns:f="sap.f"
-	xmlns:card="sap.f.cards"
 	xmlns:mvc="sap.ui.core.mvc">
 	<App id="app">
 		<VBox class="sapUiMediumMargin">
-			<Title  class="sapUiSmallMargin" titleStyle="H1" text="Home" wrapping="true" />
-			<f:Card class="sapUiSmallMargin">
-				<f:content>
-					<Title  class="sapUiSmallMargin" titleStyle="H4" id="luigi-initialized"  text="" wrapping="true" />
-				</f:content>
-			</f:Card>
+			<Text text="Welcome to this PostMan tutorial" />
+
+			<Text text="Download and install Postman from below link to get started" />
+			<Link text="Download Postman" target="_blank"
+			href="https://www.postman.com/downloads" />
 		</VBox>
 	</App>
 </mvc:View>

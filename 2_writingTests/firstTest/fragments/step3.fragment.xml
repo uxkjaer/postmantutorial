@@ -2,7 +2,18 @@
 	xmlns="sap.m"
 	xmlns:core="sap.ui.core">
 	<VBox>
-
-
+		<Text text="1. Click the Send button." class="sapUiTinyMarginBottom"/>
+		<Text text="2. Check your tests in the test tab of the response. Hopefully it looks like this" class="sapUiTinyMarginBottom"/>
+		<Image src="./assets/testResults.PNG" class="sapUiTinyMarginBottom"/>
+		<Text text="IF you were to write a negative test for the id, which would be the right syntax" class="sapUiTinyMarginBottom"/>
+		<Label text="Multiple answers are correct" />
+			<CheckBox id="1" text="pm.expect(jsonData.id).to.not.eql(2);" />
+			<CheckBox id="2" text="pm.expect(jsonData.id) is not 2" />
+			<CheckBox id="3" text="pm.expect(jsonData.id) !== 2;" />
+			<CheckBox id="4" text="pm.expect(jsonData.id).not.eql(2);" />
+			<CheckBox id="5" text="pm.expect(jsonData.id).can.not.be(2)" />
+		<Button text="Validate" press="onValidateEnd" />
+		<MessageStrip text="Success" showIcon="true" type="Success" visible="false" id="success" class="msgStrip" />
+		<MessageStrip text="Fail, try again" showIcon="true" type="Error" visible="false" id="failure" class="msgStrip" />
     </VBox>
 </core:FragmentDefinition>
