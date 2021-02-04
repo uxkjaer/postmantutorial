@@ -1,7 +1,0 @@
-.item-fade {
-    background: black;
-    opacity: 0.2;
-    transition: opacity 1.5s ease-in-out;
-    -moz-transition: opacity 1.5s ease-in-out;
-    -webkit-transition: opacity 1.5s ease-in-out;
-  }

@@ -16,7 +16,7 @@ sap.ui.define(
         LuigiClient.addInitListener(initialContext => {
           this.getView()
             .byId('luigi-initialized')
-            .setText('Luigi Client Initialized!');
+            .setText('Select your next tutorial');
           console.log('Luigi Client Initialized!');
         });
 
