@@ -28,8 +28,10 @@ sap.ui.define(
 
       onAfterRendering: function(){
         var download = this.byId("download"), oElement = download.getDomRef();
-
-        oElement.style.paddingLeft = '55px'
+        if (oElement){
+          oElement.style.paddingLeft = '55px'
+        }
+        
 
       }
     });
