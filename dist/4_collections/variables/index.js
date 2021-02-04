@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/mvc/XMLView"],function(e){"use strict";e.create({viewName:"qldh.variables.variables"}).then(function(e){e.placeAt("content")})});

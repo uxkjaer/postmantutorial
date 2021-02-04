@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/mvc/XMLView"],function(e){"use strict";e.create({viewName:"qldh.collection.collection"}).then(function(e){e.placeAt("content")})});

@@ -1,0 +1,51 @@
+<mvc:View
+	controllerName="qldh.importRequest.Sample2"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<App id="app">
+		<Page class="sapUiMediumMargin"  showHeader="false">
+			<content>
+				<VBox>
+		
+				<Text text="1. Click below hyperlink" class="sapUiTinyMarginBottom" />	
+				<Link
+				text="Click me!!!"
+				target="_blank"
+				href="https://jsonplaceholder.typicode.com/posts/1" />
+
+				<Text text="2. Open the Chrome developer tools by pressing F12 for the new tab just opened" class="sapUiTinyMarginBottom" />	
+
+				<Text text="3. Refresh the page and you should now see a line called '1' in the network tab of the chrome debugging tools" class="sapUiTinyMarginBottom" />	
+				
+				<Image src="./assets/1.PNG" class="sapUiTinyMarginBottom"/>
+				<Text text="3. Right click that line and select Copy --> copy as cURL (bash) " class="sapUiTinyMarginBottom" />	
+				<Image src="./assets/copyAsCurl.PNG" class="sapUiTinyMarginBottom"/>
+
+				<Text text="4. Open up Postman and click the import button" class="sapUiTinyMarginBottom" />	
+				<Image src="./assets/import.PNG" class="sapUiTinyMarginBottom"/>
+				
+				<Text text="5. Select the raw text tab and paste from your clipboard. Now click continue and afterwards import" class="sapUiTinyMarginBottom" />	
+				<Image src="./assets/raw.PNG" class="sapUiTinyMarginBottom"/>
+				<Text text="6. Press the Send Button" class="sapUiTinyMarginBottom" />	
+				<Image src="../../common/assets/sendRequest.PNG" class="sapUiTinyMarginBottom"/>
+				<Text text="What does cURL stand for" class="sapUiTinyMarginBottom" />	
+				<RadioButtonGroup id="rbg2" class="sapUiMediumMarginBottom">
+					<RadioButton id="1" text="Cookie URL" />
+					<RadioButton id="2" text="Client URL" />
+					<RadioButton id="3" text="the C is a substitute for h as in hURL" />
+					<RadioButton id="4" text="Create URL" />
+					<RadioButton id="5" text="Composite URL" />
+				</RadioButtonGroup>
+				<Button text="Validate Result" press="onValidate" class="sapUiLargeMarginBottom" />
+				<MessageStrip text="Success" showIcon="true" type="Success" visible="false" id="success" class="msgStrip" />
+				<MessageStrip text="{/failure}" showIcon="true" type="Error" visible="false" id="failure" class="msgStrip" >
+					<Link text="here"
+					target="_blank"
+					href="https://en.wikipedia.org/wiki/CURL" />
+				</MessageStrip>
+				</VBox>
+			</content>
+		</Page>
+	</App>
+</mvc:View>

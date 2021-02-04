@@ -1,0 +1,119 @@
+.item-fade {
+    background: black;
+    opacity: 0.2;
+    transition: opacity 1.5s ease-in-out;
+    -moz-transition: opacity 1.5s ease-in-out;
+    -webkit-transition: opacity 1.5s ease-in-out;
+  }
+
+  .msgStrip {
+    position: fixed !important;
+    bottom: 50% !important;
+    left: 35%;
+    width: 500px;
+    height: 70px;
+    animation: shake 0.5s;
+   /* When the animation is finished, start again */
+   animation-iteration-count: 3s;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+  .sapMText {
+    display: inline-block;
+    box-sizing: border-box;
+    white-space: pre-line;
+    word-wrap: break-word;
+    cursor: text;
+    font-size: 1.3rem !important;
+    font-family: "72fallback","72","72full",Arial,Helvetica,sans-serif;
+    line-height: normal;
+    color: #32363a;
+  }
+
+  .sapMLnk {
+    color: #0a6ed1;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+    font-family: "72fallback","72","72full",Arial,Helvetica,sans-serif;
+    font-size: 1rem !important;
+    cursor: pointer;
+  }
+
+
+  /* .fd-side-nav {
+    font-size: .875rem;
+    font-size: var(--sapFontSize,.875rem);
+    line-height: 1.42857;
+    color: #32363a;
+    color: var(--sapTextColor,#32363a);
+    font-family: "72","72full",Arial,Helvetica,sans-serif;
+    font-family: var(--sapFontFamily,"72","72full",Arial,Helvetica,sans-serif);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-top-color: initial;
+    border-top-style: initial;
+    border-top-width: 0px;
+    border-right-color: var(--sapGroup_ContentBorderColor,#d9d9d9);
+    border-bottom-color: initial;
+    border-bottom-style: initial;
+    border-bottom-width: 0px;
+    border-left-color: initial;
+    border-left-style: initial;
+    border-left-width: 0px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    background-color: #fff;
+    background-color: var(--sapList_Background,#fff);
+    width: 20rem;
+    border-right: .0625rem solid;
+    border-right: var(--sapList_BorderWidth,.0625rem) solid;
+    border-right-color: #d9d9d9;
+    border-right-color: var(--sapGroup_ContentBorderColor,#d9d9d9);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .iframeContainer.svelte-cdklvn, .spinnerContainer.svelte-cdklvn {
+    position: absolute;
+    top: 44px;
+    left: 20rem;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    min-width: auto;
+    min-height: auto;
+    display: block;
+  } */
