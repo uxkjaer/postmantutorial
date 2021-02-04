@@ -20,17 +20,45 @@ sap.ui.define(
         return;
       }
 
-      if (myText === text) {
+      if (myText === text){
+        this.byId("step1").setValidated(true)
+      }
+    },
+
+    onValidateStep1: function(){
+      this.byId("step2").setValidated(true)
+    },
+
+    onValidateEnd: function(){
+      var bValidated;
+      for (let i = 1; i < 6; i++){
+        let bSelected = this.byId(i.toString()).getSelected();
+        if (i % 2 === 1 && bSelected === true){
+          bValidated = true
+        }
+        else if (bSelected === false){
+          bValidated = true
+        } 
+        else {
+          bValidated = false
+          i = 6
+        }
+
+      }
+
+      if (bValidated){
         this.getView().byId("success").setVisible(true);
         this.getView().byId("failure").setVisible(false);
         this._showFireworks();
         setTimeout(() => {
           document.getElementById("content").classList.add("item-fade")
         }, 200)
-      } else {
-        this.getView().byId("failure").setVisible(true);
-        this.getView().byId("success").setVisible(false);
       }
+      else {
+        this.getView().byId("success").setVisible(false);
+        this.getView().byId("failure").setVisible(true);
+      }
+      
     }
   });
 }

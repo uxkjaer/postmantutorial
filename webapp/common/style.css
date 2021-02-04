@@ -16,6 +16,14 @@
    /* When the animation is finished, start again */
    animation-iteration-count: 3s;
   }
+
+  .download {
+    padding-left: 55px !important
+  }
+
+  .sapMWizardNextButtonVisible {
+    bottom: 40px !important
+  }
   
   @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }

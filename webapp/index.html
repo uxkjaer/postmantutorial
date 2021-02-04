@@ -7,12 +7,23 @@
     <link rel="icon" 
     type="image/png" 
     href="./logo.png">
+
+
     <meta
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"
     />
+
+    <script 
+    id="sap-ui-bootstrap"            
+    src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js" 
+    data-sap-ui-libs="sap.m, sap.ui.core"
+    data-sap-ui-theme="sap_fiori_3" 
+    data-sap-ui-preload="async" >
+</script>
     <link rel="stylesheet" href="libs/luigi-core/luigi.css" />
     <link rel="stylesheet" href="./common/style.css" />
+
     <style>
       :root{--luigi__left-sidenav--width: 20rem;}
     
@@ -23,6 +34,6 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script src="libs/luigi-core/luigi.js"></script>
-    <script src="/luigi-config.js"></script>
+    <script src="./luigi-config.js"></script>
   </body>
 </html>

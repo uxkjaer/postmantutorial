@@ -9,15 +9,15 @@
             <content>
                 <Wizard id="CreateProductWizard" class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
 								complete="wizardCompletedHandler">
-                    <WizardStep id="step1" title="Create Request">
+                    <WizardStep id="step1" title="Create Request" validated="false">
                         <core:Fragment
 								fragmentName="qldh.firstTest.fragments.step1" type="XML" />
 					</WizardStep>
-					<WizardStep id="step2" title="Create Test">
+					<WizardStep id="step2" title="Create Test" validated="false">
                         <core:Fragment
 								fragmentName="qldh.firstTest.fragments.step2" type="XML" />
 					</WizardStep>
-					<WizardStep id="step3" title="Evaluate results">
+					<WizardStep id="step3" title="Evaluate results" validated="false">
                         <core:Fragment
 								fragmentName="qldh.firstTest.fragments.step3" type="XML" />
                     </WizardStep>
