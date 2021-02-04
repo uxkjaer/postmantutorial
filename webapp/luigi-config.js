@@ -184,8 +184,8 @@ Luigi.setConfig({
   settings: {
     header: {
       title: "Postman Tutorial",
-      logo: "/menu.png",
-      favicon: "/logo.png",
+      logo: "./menu.png",
+      favicon: "./logo.png",
     },
     responsiveNavigation: "simpleMobileOnly",
     appLoadingIndicator: {
