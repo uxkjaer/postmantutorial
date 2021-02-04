@@ -17,6 +17,10 @@
    animation-iteration-count: 3s;
   }
 
+  .download {
+    padding-left: 55px !important
+  }
+
   .sapMWizardNextButtonVisible {
     bottom: 40px !important
   }

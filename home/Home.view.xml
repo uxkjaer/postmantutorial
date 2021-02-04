@@ -1,14 +1,19 @@
 <mvc:View
 	controllerName="luigi.demo.home.Home"
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.f"
+	xmlns:card="sap.f.cards"
+	displayBlock="true">
 	<App id="app">
 		<VBox class="sapUiMediumMargin">
-			<Text text="Welcome to this PostMan tutorial" />
-
-			<Text text="Download and install Postman from below link to get started" />
-			<Link text="Download Postman" target="_blank"
-			href="https://www.postman.com/downloads" />
+			<Title  class="sapUiSmallMargin" titleStyle="H1" text="Welcome to this PostMan tutorial" wrapping="true" />
+			<f:Card class="sapUiSmallMargin">
+				<f:content>
+					<Title  class="sapUiSmallMargin" titleStyle="H4" text="Download and install Postman from below link to get started." wrapping="true" />
+				</f:content>
+			</f:Card>
+			<Image id="download" src="../common/assets/download.PNG" class="sapUiTinyMarginBottom" press="onDownload" />
 		</VBox>
 	</App>
 </mvc:View>

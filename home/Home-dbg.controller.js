@@ -8,21 +8,29 @@ sap.ui.define(
     'use strict';
 
     return Controller.extend('luigi.demo.home.Home', {
+
+      onDownload: function(){
+        window.open("https://dl.pstmn.io/download/latest/win64", "_blank")
+      },
       getRouter: function() {
         return UIComponent.getRouterFor(this);
       },
 
       onInit: function() {
         LuigiClient.addInitListener(initialContext => {
-          this.getView()
-            .byId('luigi-initialized')
-            .setText('Select your next tutorial');
-          console.log('Luigi Client Initialized!');
+          
         });
 
         LuigiClient.addContextUpdateListener(updatedContext => {
           console.log('Luigi Client Updated!');
         });
+      },
+
+      onAfterRendering: function(){
+        var download = this.byId("download"), oElement = download.getDomRef();
+
+        oElement.style.paddingLeft = '55px'
+
       }
     });
   }
