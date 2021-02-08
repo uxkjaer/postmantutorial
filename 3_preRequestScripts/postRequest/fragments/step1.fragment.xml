@@ -1,13 +1,39 @@
 <core:FragmentDefinition
 	xmlns="sap.m"
-	xmlns:core="sap.ui.core">
+	xmlns:core="sap.ui.core"
+	xmlns:code="sap.ui.codeeditor"
+	>
 	<VBox>
-		<Text text="1. Open up Postman and click the Create a request in the wizard or simply press the + if you've already shut that down" class="sapUiTinyMarginBottom" />	
-				<Image src="../../common/assets/createRequest.PNG" class="sapUiTinyMarginBottom"/>
-				<Text text="2. Add the following URL: https://jsonplaceholder.typicode.com/posts/1 and press the Send Button" class="sapUiTinyMarginBottom" />	
-				<Image src="../../common/assets/sendRequest.PNG" class="sapUiTinyMarginBottom"/>
-				<Text text="3. Paste the body of the result below" class="sapUiTinyMarginBottom" />	
-				<TextArea id="myText" width="100%" rows="5" class="sapUiTinyMarginBottom" />
-				<Button text="Validate Result" press="onValidate" class="sapUiLargeMarginBottom" />
+		<Text text="1. Log on to MyHR in HED with user 250004 and password Myhr123456 using the link below" class="sapUiTinyMarginBottom" />	
+				<Link text="MYHR-dev" target="_blank" href="https://myhr-dev.health.qld.gov.au/?sap-ui-debug=qldh#Shell-home" />
+				<Text text="2. Go to Submit Form and search for mileage, now click the form" class="sapUiTinyMarginBottom" />	
+				<MessageStrip text="Notice that we have added the url parameter '?sap-ui-debug=qldh. This enables us to view the uncompressed source code and easier work with the application" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+				<Text text="3. Open the developer tools by pressing F12" class="sapUiTinyMarginBottom" />	
+				<Text text="4. Go to sources and use shortcut CTRL + O and find file claimstart-dbg.controller.js" class="sapUiTinyMarginBottom" />	
+				<Image src="./assets/claimstart.PNG" class="sapUiTinyMarginBottom"/>
+
+				<Text text="4. Set a breakpoint in line 32 " class="sapUiTinyMarginBottom" />	
+				<Image src="./assets/32.PNG" class="sapUiTinyMarginBottom"/>
+
+				<Text text="5. Now refresh the browser to hit the breakpoint" class="sapUiTinyMarginBottom" />	
+				<Text text="6. Once the breakpoint is hit, go to the console tab and paste the following code and press enter" class="sapUiTinyMarginBottom" />	
+				<code:CodeEditor editable="false"
+				value="this.getOwnerComponent().getModel().setUseBatch(false)"
+				height="200px" />
+				<MessageStrip text="This piece of code fetches the default model of the application (MVA service) and disables the $batch mode, then all calls are send individually" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+
+				<Text text="7. Go back to the sources tab and press F8" class="sapUiTinyMarginBottom" />	
+				<Text text="8. Add myself as claim for and the date as todays date. Click the Start Claim button " class="sapUiTinyMarginBottom" />	
+				<Image src="./assets/claim.png" class="sapUiTinyMarginBottom"/>
+				<Text text="9. In the networks tab, filter the requets by ClaimHeaderSet and copy it as a cURL as done in exersice Import Request" class="sapUiTinyMarginBottom" />	
+				<Image src="./assets/post.PNG" class="sapUiTinyMarginBottom"/>
+				<Text text="What does a batch request mean?" class="sapUiTinyMarginBottom" />	
+				<RadioButtonGroup id="rbg2" class="sapUiMediumMarginBottom" selectedIndex="2">
+					<RadioButton id="a" text="Each HTTP request is signed by a batch number to easily identify it in the debugger and application log" selected="false"/>
+					<RadioButton id="b" text="A batch collects HTTP requests and sends them when the user presses a button" selected="false" />
+					<RadioButton id="c" text="It's a request for more cookies for the cookie jar"  selected="false"/>
+					<RadioButton id="d" text="Several HTTP requests are bundled up in one and executed in a single request" selected="false"/>
+				</RadioButtonGroup>
+				<Button text="Validate Result" press="onValidateStep1" class="sapUiLargeMarginBottom" />
     </VBox>
 </core:FragmentDefinition>
