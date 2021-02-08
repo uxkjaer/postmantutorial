@@ -9,7 +9,7 @@
 				<VBox>
 				<Text text="1. Open up Postman and click File --> Settings" class="sapUiTinyMarginBottom" />	
 				<Image src="./assets/proxy.PNG" class="sapUiTinyMarginBottom"/>
-				<Text text="2. Tick the Add a Custom Proxy Configuration" class="sapUiTinyMarginBottom" />	
+				<Text text="2. Select the Proxy tab and Tick the Add a Custom Proxy Configuration" class="sapUiTinyMarginBottom" />	
 				<Text text="3. Set the proxy server to proxy.health.qld.gov.au and port 8080" class="sapUiTinyMarginBottom" />	
 				<Text text="4. Enable the proxy Auth and add your windows username and password" class="sapUiTinyMarginBottom" />	
 				<Text text="5. Add the Proxy Bypass for localhost" class="sapUiTinyMarginBottom" />	
