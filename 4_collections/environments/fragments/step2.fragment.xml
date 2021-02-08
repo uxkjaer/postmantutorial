@@ -1,0 +1,28 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:code="sap.ui.codeeditor"
+
+	xmlns:core="sap.ui.core">
+    <VBox>
+        <MessageStrip text="We do have one issue with environments if we want to have different users for different systems as we can't get auth credentials from the environment, let's create a workaround" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+        <FormattedText htmlText="1. Click the &lt;span style='font-size: 24px;'&gt;&#128065;&lt;/span&gt; icon and select edit" class="sapUiTinyMarginBottom" />
+        <Text text="2. Create two new variables called username and password and set them to 250004 and Myhr1234 respectively" class="sapUiTinyMarginBottom" />
+        <Text text="3. Add one more variable called auth and don't set a value , then click update." class="sapUiTinyMarginBottom" />
+        <Text text="4. Click the Pre-request script and replace line 3 with the following" class="sapUiTinyMarginBottom" />
+        <code:CodeEditor editable="false"
+	value="{/code}"
+	height="400px" />
+        <Image src="./assets/pre.PNG" class="sapUiTinyMarginBottom"/>
+        <Text text="5. Click the Authorization tab and set the type to No Auth" class="sapUiTinyMarginBottom" />
+        <Text text="6. Go to the Headers tab and add a header named 'Authorization' and set the value to {{auth}}" class="sapUiTinyMarginBottom" />
+        <Image src="./assets/auth.PNG" class="sapUiTinyMarginBottom"/>
+        <MessageStrip text="Now we use the username and password from the environment as an authentication instead of from the collection. This header would need to be maintained on all subsequent requests as well in the collection" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+        <Text text="7. Add the same variables to the environment for HEG" class="sapUiTinyMarginBottom" />
+        <Text text="8. Select the HEG environment and execute your request" class="sapUiTinyMarginBottom" />
+        <Text text="Did it work?" class="sapUiTinyMarginBottom" />
+        <CheckBox id="1" text="No" select=".onSelect('2')" />
+        <CheckBox id="2" text="Yes" select=".onSelect('1')" />
+        <MessageStrip text="Success, you are well on your way to become a true postman hacker!" showIcon="true" type="Success" visible="false" id="success" class="msgStrip" />
+        <MessageStrip text="Failure, try again" showIcon="true" type="Error" visible="false" id="failure" class="msgStrip" />
+    </VBox>
+</core:FragmentDefinition>

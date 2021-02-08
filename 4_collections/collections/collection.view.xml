@@ -2,17 +2,34 @@
 	controllerName="qldh.collection.collection"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:f="sap.f"
+	xmlns:html="sap.ui.core.HTML"
 	xmlns:card="sap.f.cards"
 	displayBlock="true">
-	<App id="app">
-		<VBox class="sapUiMediumMargin">
-			<Title  class="sapUiSmallMargin" titleStyle="H1" text="Sample 2" wrapping="true" />
-			<f:Card class="sapUiSmallMargin">
-				<f:content>
-					<Title  class="sapUiSmallMargin" titleStyle="H4" text="Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat." wrapping="true" />
-				</f:content>
-			</f:Card>
-		</VBox>
-	</App>
+    <App id="app">
+        <Page class="sapUiMediumMargin"  showHeader="false">
+            <content>
+                <VBox class="sapUiMediumMargin">
+					<Text text="1. Click the Save button on your request from the last tutorial" class="sapUiTinyMarginBottom" />
+					<Text text="2. Add a saying name and click the + Create Collection Button and give your collection as good name, like MVA." class="sapUiTinyMarginBottom" />
+					<Image src="./assets/create.PNG" class="sapUiTinyMarginBottom"/>
+					<FormattedText htmlText="3. Click the &lt;span style='font-size: 24px;'&gt;&#10003;&lt;/span&gt; button and press Save" class="sapUiTinyMarginBottom" />
+					<Text text="Click the ... on your collection and choose edit " class="sapUiTinyMarginBottom" />
+					<Image src="./assets/edit.PNG" class="sapUiTinyMarginBottom"/>
+					<Text text="3. Click the Authorization tab and set it to Basic Auth with user 250004 and password Myhr1234. Press Update" class="sapUiTinyMarginBottom" />
+					<Text text="4. On your request, click the Authorization tab and set it to inherit auth from parent" class="sapUiTinyMarginBottom" />
+					<Image src="./assets/parent.PNG" class="sapUiTinyMarginBottom"/>
+					<MessageStrip text="Now we don't have to maintain the Authorization every time and can rely on the collections Authorization instead" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+					<Text text="5. Click the PreRequest Script tab and change line 12 to pm.collectionVariables.set('csrf-token', token.value)" class="sapUiTinyMarginBottom" />
+					<MessageStrip text="This way the x-csrf-token is set on the collection and we don't have to request it again" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+					<Text text="If you set the same variable in two different scopes local and collection, which one is used?" class="sapUiTinyMarginBottom" />
+					<CheckBox id="1" text="The local one used by pm.variables.set" select=".onSelect('2')" />
+					<CheckBox id="2" text="The one from the collection set by pm.collectionVariables.set" select=".onSelect('1')" />
+					<Button text="Validate Result" press="onValidate" class="sapUiLargeMarginBottom" />
+					<MessageStrip text="Success" showIcon="true" type="Success" visible="false" id="success" class="msgStrip" />
+					<MessageStrip text="Failure, try again" showIcon="true" type="Error" visible="false" id="failure" class="msgStrip" />
+					
+				</VBox>
+            </content>
+        </Page>
+    </App>
 </mvc:View>

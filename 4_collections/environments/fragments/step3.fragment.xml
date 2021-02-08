@@ -1,0 +1,9 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:code="sap.ui.codeeditor"
+
+	xmlns:core="sap.ui.core">
+	<VBox>
+	
+    </VBox>
+</core:FragmentDefinition>

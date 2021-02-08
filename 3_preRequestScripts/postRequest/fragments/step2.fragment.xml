@@ -5,8 +5,8 @@
 	xmlns:core="sap.ui.core">
 	<VBox>
 		<Text text="1. Import the copied cURL request into Postman" class="sapUiTinyMarginBottom" />	
-		<Text text="2. We can acually execute the request right away, but let's make it a bit more dynamic, go to the body tab and replace the value of Effective Date with the following '\/Date({{$isoTimestamp}})\/''" class="sapUiTinyMarginBottom" />	
-		<Image src="./assets/datetime.PNG" class="sapUiTinyMarginBottom"/>
+		<Text text="2. We can acually execute the request right away, but let's make it a bit more dynamic, go to the body tab and replace the value of Effective Date with the following '\/Date({{$isoTimestamp}})\/'" class="sapUiTinyMarginBottom" />	
+		<Image src="./assets/datetime.png" class="sapUiTinyMarginBottom"/>
 		<MessageStrip text="This snippet uses a postman build in function to get the current timestamp and use it as the effective date instead of a preset value" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
 		<Text text="3. Click the Pre request script tab and add the following code" class="sapUiTinyMarginBottom" />	
 		

@@ -8,7 +8,8 @@
 		<code:CodeEditor editable="false"
 		value="{/test}"
 		height="400px" />
-		<Text text="2. Click Send again" class="sapUiTinyMarginBottom" />	
+		<Text text="2. Click Send again" class="sapUiTinyMarginBottom" />
+		<Text text="Did your test pass?" class="sapUiTinyMarginBottom" />
 		<Switch id="mySwitch" state="false" customTextOn="Yes" customTextOff="No" />
 		<Button text="Validate" press="onValidateEnd" />
 		<MessageStrip text="Success" showIcon="true" type="Success" visible="false" id="success" class="msgStrip" />

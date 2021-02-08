@@ -1,18 +1,30 @@
+
 <mvc:View
 	controllerName="qldh.testRunner.testRunner"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:f="sap.f"
-	xmlns:card="sap.f.cards"
+	xmlns:core="sap.ui.core"
+
+	xmlns:html="sap.ui.core.HTML"
+	xmlns:code="sap.ui.codeeditor"
 	displayBlock="true">
-	<App id="app">
-		<VBox class="sapUiMediumMargin">
-			<Title  class="sapUiSmallMargin" titleStyle="H1" text="Sample 2" wrapping="true" />
-			<f:Card class="sapUiSmallMargin">
-				<f:content>
-					<Title  class="sapUiSmallMargin" titleStyle="H4" text="Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat." wrapping="true" />
-				</f:content>
-			</f:Card>
-		</VBox>
-	</App>
+    <App id="app">
+        <Page class="sapUiMediumMargin"  showHeader="false">
+            <content>
+				<Wizard id="CreateProductWizard" class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
+				complete="onValidate" finishButtonText="Validate">
+	<WizardStep id="step1" title="Create the Employee claim" validated="true">
+		<core:Fragment
+				fragmentName="qldh.testRunner.fragments.step1" type="XML" />
+	</WizardStep>
+	<WizardStep id="step2" title="Approve as Manager" validated="true">
+		<core:Fragment
+				fragmentName="qldh.testRunner.fragments.step2" type="XML" />
+	</WizardStep>					
+	
+</Wizard>
+            </content>
+        </Page>
+    </App>
 </mvc:View>
+

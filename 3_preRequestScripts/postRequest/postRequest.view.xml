@@ -8,7 +8,7 @@
         <Page class="sapUiMediumMargin"  showHeader="false">
             <content>
                 <Wizard id="CreateProductWizard" class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
-								complete="wizardCompletedHandler">
+				complete="onValidateEnd" finishButtonText="Validate">
                     <WizardStep id="step1" title="Get the post request" validated="false">
                         <core:Fragment
 								fragmentName="qldh.postRequest.fragments.step1" type="XML" />
