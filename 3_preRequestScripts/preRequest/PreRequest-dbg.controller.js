@@ -4,23 +4,9 @@ sap.ui.define(
     'use strict';
 
     return Controller.extend('qldh.PreRequest.PreRequest', {onValidate: function () {
-      var text = JSON.stringify({
-        userId: 1,
-        id: 1,
-        title:
-          "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-        body:
-          "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      });
-      var myText = this.getView().byId("myText").getValue();
-      try {
-        myText = JSON.stringify(JSON.parse(myText));
-      } catch (error) {
-        this.getView().byId("failure").setVisible(true);
-        return;
-      }
-
-      if (myText === text) {
+      
+      
+      if (this.byId("1").getSelected() === true && this.byId("myExpect").getValue() === "2") {
         this.getView().byId("success").setVisible(true);
         this.getView().byId("failure").setVisible(false);
         this._showFireworks();
@@ -31,6 +17,10 @@ sap.ui.define(
         this.getView().byId("failure").setVisible(true);
         this.getView().byId("success").setVisible(false);
       }
+    },
+
+    onSelect: function(sId){
+      this.byId(sId.toString()).setSelected(false)
     }
   });
 }

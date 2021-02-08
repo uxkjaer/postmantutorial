@@ -2,17 +2,39 @@
 	controllerName="qldh.PreRequest.PreRequest"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:f="sap.f"
-	xmlns:card="sap.f.cards"
+	xmlns:code="sap.ui.codeeditor"
+
 	displayBlock="true">
 	<App id="app">
-		<VBox class="sapUiMediumMargin">
-			<Title  class="sapUiSmallMargin" titleStyle="H1" text="Sample 2" wrapping="true" />
-			<f:Card class="sapUiSmallMargin">
-				<f:content>
-					<Title  class="sapUiSmallMargin" titleStyle="H4" text="Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat." wrapping="true" />
-				</f:content>
-			</f:Card>
-		</VBox>
+		<Page class="sapUiMediumMargin"  showHeader="false">
+			<content>
+				<VBox>
+		
+				<Text text="1. Create a new requst with the following link: https://jsonplaceholder.typicode.com/posts/1" class="sapUiTinyMarginBottom" />	
+				<Text text="2. Click the Prequet script tab and add the following content" class="sapUiTinyMarginBottom" />	
+				<code:CodeEditor editable="false"
+				value="pm.variables.set('index', '2');"
+				height="200px" />
+				<MessageStrip text="pm.variables enables us to save variables dynamically. Here we save in a local scope" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+
+				<Text text="3. Now change the URL to replace the one with {{index}}" class="sapUiTinyMarginBottom" />	
+				<MessageStrip text="the {{ }} helps Postman understand to look for a variable. Index is the name you just gave in the pre request script." class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+				
+				<Text text="4. Click the Send button " class="sapUiTinyMarginBottom" />	
+				
+				<Text text="When you save a variable with pm.variables.set, what does that mean?" class="sapUiTinyMarginBottom" />	
+					<CheckBox id="1" text="The variable is saved locally and can't be used in following requests" select=".onSelect('2')" />
+					<CheckBox id="2" text="The variable can be used in further requests" select=".onSelect('1')" />
+					
+				<Text text="What is the id of your response?" class="sapUiTinyMarginBottom" />	
+				<Input id="myExpect" width="50%"  class="sapUiTinyMarginBottom" /> 
+				<Button text="Validate Result" press="onValidate" class="sapUiLargeMarginBottom" />
+				<MessageStrip text="Success" showIcon="true" type="Success" visible="false" id="success" class="msgStrip" />
+				<MessageStrip text="Failure, try again" showIcon="true" type="Error" visible="false" id="failure" class="msgStrip" >
+				
+				</MessageStrip>
+				</VBox>
+			</content>
+		</Page>
 	</App>
 </mvc:View>
