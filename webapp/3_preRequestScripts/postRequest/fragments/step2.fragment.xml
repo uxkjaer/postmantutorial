@@ -1,0 +1,27 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:code="sap.ui.codeeditor"
+
+	xmlns:core="sap.ui.core">
+	<VBox>
+		<Text text="1. Import the copied cURL request into Postman" class="sapUiTinyMarginBottom" />	
+		<Text text="2. We can acually execute the request right away, but let's make it a bit more dynamic, go to the body tab and replace the value of Effective Date with the following '\/Date({{$isoTimestamp}})\/'" class="sapUiTinyMarginBottom" />	
+		<Image src="./assets/datetime.png" class="sapUiTinyMarginBottom"/>
+		<MessageStrip text="This snippet uses a postman build in function to get the current timestamp and use it as the effective date instead of a preset value" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+		<Text text="3. Click the Pre request script tab and add the following code" class="sapUiTinyMarginBottom" />	
+		
+		<code:CodeEditor editable="false"
+		value="{/code}"
+		height="400px" />
+		<MessageStrip text="This fetches a Cross-site request forgery token and saves it in a variable called csrf-token" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+		<Text text="4. Click the Headers tab and replace the value of the x-csrf-token with {{csrf-token}}" class="sapUiTinyMarginBottom" />	
+		<Image src="./assets/token.PNG" class="sapUiTinyMarginBottom"/>
+		<Text text="5. Deselect the cookies tab" class="sapUiTinyMarginBottom" />	
+		<Text text="6. Click the Authorization tab and set the type to Basic Auth" class="sapUiTinyMarginBottom" />	
+		<Text text="7. Set Username = 250004 and Password = Myhr1234" class="sapUiTinyMarginBottom" />	
+		<Image src="./assets/auth.PNG" class="sapUiTinyMarginBottom"/>
+		<Text text="Click send" class="sapUiLargeMarginBottom" />	
+
+
+    </VBox>
+</core:FragmentDefinition>

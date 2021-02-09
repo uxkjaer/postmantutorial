@@ -1,0 +1,18 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:code="sap.ui.codeeditor"
+
+	xmlns:core="sap.ui.core">
+	<VBox>
+		<Text text="1. Add a test with the following test" class="sapUiTinyMarginBottom" />	
+		<code:CodeEditor editable="false"
+		value="{/test}"
+		height="400px" />
+		<Text text="2. Click Send again" class="sapUiTinyMarginBottom" />
+		<Text text="Did your test pass?" class="sapUiTinyMarginBottom" />
+		<Switch id="mySwitch" state="false" customTextOn="Yes" customTextOff="No" />
+		<Button text="Validate" press="onValidateEnd" />
+		<MessageStrip text="Success" showIcon="true" type="Success" visible="false" id="success" class="msgStrip" />
+		<MessageStrip text="Fail, try again" showIcon="true" type="Error" visible="false" id="failure" class="msgStrip" />
+    </VBox>
+</core:FragmentDefinition>

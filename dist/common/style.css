@@ -6,6 +6,13 @@
     -webkit-transition: opacity 1.5s ease-in-out;
   }
 
+  .embed {
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    visibility: hidden;
+  }
+
   .msgStrip {
     position: fixed !important;
     bottom: 50% !important;
@@ -15,6 +22,10 @@
     animation: shake 0.5s;
    /* When the animation is finished, start again */
    animation-iteration-count: 3s;
+  }
+
+  .download {
+    padding-left: 55px !important
   }
 
   .sapMWizardNextButtonVisible {

@@ -22,7 +22,6 @@ Luigi.setConfig({
               icon: "letter",
               collapsible: true,
             },
-  
 
             loadingIndicator: {
               enabled: false,
@@ -37,7 +36,6 @@ Luigi.setConfig({
               icon: "letter",
               collapsible: true,
             },
-  
 
             loadingIndicator: {
               enabled: false,
@@ -51,7 +49,6 @@ Luigi.setConfig({
             loadingIndicator: {
               enabled: false,
             },
-  
 
             viewUrl: "1_apiClient/importRequest/sample2.html",
           },
@@ -59,7 +56,6 @@ Luigi.setConfig({
             pathSegment: "firstTest",
             label: "Create your first test",
             icon: "paper-plane",
-  
 
             viewUrl: "2_writingTests/firstTest/sample2.html",
             category: {
@@ -70,13 +66,11 @@ Luigi.setConfig({
             loadingIndicator: {
               enabled: false,
             },
-            
           },
           {
             pathSegment: "jsonSchema",
             label: "JSON Schema validations",
             icon: "paper-plane",
-  
 
             viewUrl: "2_writingTests/jsonSchema/schema.html",
             category: "Writing Tests",
@@ -84,34 +78,30 @@ Luigi.setConfig({
               enabled: false,
             },
           },
-            {
-              pathSegment: "PreRequest",
-              label: "Pre-request scripts",
-              icon: "paper-plane",
-    
+          {
+            pathSegment: "PreRequest",
+            label: "Pre-request scripts",
+            icon: "paper-plane",
 
-              viewUrl: "3_preRequestScripts/preRequest/PreRequest.html",
-              category: {
-                label: "Pre-Request Scripts",
-                icon: "arobase",
-                collapsible: true,
-              },
-              loadingIndicator: {
-                enabled: false,
-              },
-              
+            viewUrl: "3_preRequestScripts/preRequest/PreRequest.html",
+            category: {
+              label: "Pre-Request Scripts",
+              icon: "arobase",
+              collapsible: true,
             },
-            {
-              pathSegment: "postRequest",
-              label: "Create a post request",
-              icon: "paper-plane",
-              viewUrl: "3_preRequestScripts/postRequest/postRequest.html",
-              category: "Pre-Request Scripts",
-              loadingIndicator: {
-                enabled: false,
-              },
-    
-
+            loadingIndicator: {
+              enabled: false,
+            },
+          },
+          {
+            pathSegment: "postRequest",
+            label: "Create a post request",
+            icon: "paper-plane",
+            viewUrl: "3_preRequestScripts/postRequest/postRequest.html",
+            category: "Pre-Request Scripts",
+            loadingIndicator: {
+              enabled: false,
+            },
           },
           {
             pathSegment: "collections",
@@ -126,9 +116,6 @@ Luigi.setConfig({
             loadingIndicator: {
               enabled: false,
             },
-  
-
-            
           },
           {
             pathSegment: "environments",
@@ -139,36 +126,22 @@ Luigi.setConfig({
             loadingIndicator: {
               enabled: false,
             },
-  
-
           },
-            {
-              pathSegment: "variables",
-              label: "Variables",
-              icon: "paper-plane",
-              viewUrl: "4_collections/variables/variables.html",
-              category: "Cross Environment",
-              loadingIndicator: {
-                enabled: false,
-              },
-    
-        },
-        {
-          pathSegment: "testRunner",
-          label: "Test Runner",
-          icon: "paper-plane",
-          viewUrl: "5_testRunner/testRunner/testRunner.html",
-          category: {
+          {
+            pathSegment: "testRunner",
             label: "Test Runner",
-            icon: "physical-activity",
-            collapsible: true,
-          },
+            icon: "paper-plane",
+            viewUrl: "5_testRunner/testRunner/testRunner.html",
+            category: {
+              label: "Test Runner",
+              icon: "physical-activity",
+              collapsible: true,
+            },
 
-          loadingIndicator: {
-            enabled: false,
+            loadingIndicator: {
+              enabled: false,
+            },
           },
-          
-        },
         ],
       },
     ],
@@ -184,8 +157,8 @@ Luigi.setConfig({
   settings: {
     header: {
       title: "Postman Tutorial",
-      logo: "/menu.png",
-      favicon: "/logo.png",
+      logo: "./menu.png",
+      favicon: "./logo.png",
     },
     responsiveNavigation: "simpleMobileOnly",
     appLoadingIndicator: {

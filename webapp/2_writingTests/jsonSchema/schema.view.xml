@@ -7,57 +7,49 @@
 	xmlns:card="sap.f.cards"
 	xmlns:code="sap.ui.codeeditor"
 	displayBlock="true">
-	<App id="app">
-		<Page class="sapUiMediumMargin"  showHeader="false">
+    <App id="app">
+        <Page class="sapUiMediumMargin"  showHeader="false">
             <content>
-				<Wizard id="CreateProductWizard" class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
+                <Wizard id="CreateProductWizard" class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
 				complete="wizardCompletedHandler">
-	<WizardStep id="step1" title="Create Schema" validated="false">
-				<VBox>
-				<Text text="1. Continuing from last tutorial, let's add a schema validation" class="sapUiTinyMarginBottom" />	
-				
-				<Text text="2. Go to https://jsonschema.net/home and click the continue as guest" class="sapUiTinyMarginBottom" />	
-				<Text text="3. Replace the content in the right window with the body of the result from postman" class="sapUiTinyMarginBottom" />	
-				<Image src="./assets/schema.PNG" class="sapUiTinyMarginBottom"/>
-				<Text text="4. Press the copy to clipboard button on the left" class="sapUiTinyMarginBottom" />	
-				<Image src="./assets/copyToClipboard.PNG" class="sapUiTinyMarginBottom"/>
-				<f:Card class="sapUiSmallMargin">
-					<f:content>
-						<Title  class="sapUiSmallMargin" titleStyle="H4" text="The schema validation allows us to check on the response in regards to types, what is returned and it's values. So more comprehensive than a 'simple test'." wrapping="true" />
-					</f:content>
-				</f:Card>
-				<Text text="What is the type of title?" class="sapUiTinyMarginBottom" />	
-				<Input id="myText" width="50%"  class="sapUiTinyMarginBottom" />
-				<Button text="Validate" press="onValidate" class="sapUiLargeMarginBottom" />
-			</VBox>
-		</WizardStep>
-<WizardStep id="step2" title="Create Test" validated="false">
-	<VBox>
-		<Text text="1. Go back to Postman and click the 'Use Tiny Validator for JSON data' snippet" class="sapUiTinyMarginBottom" />	
-		
-		<Text text="2. Delete the lines var data1 = [true, false];
-		var data2 = [true, 123];" class="sapUiTinyMarginBottom" />	
-		<Text text="3. replace the schema object with the content from your clipboard" class="sapUiTinyMarginBottom" />	
-		
-		<Text text="4. Replace the content of your schema test with the following snippet" class="sapUiTinyMarginBottom" />	
-		<code:CodeEditor editable="false"
-		value="{/text}"
-	height="300px" />
-		<Image src="./assets/copyToClipboard.PNG" class="sapUiTinyMarginBottom"/>
-		<f:Card class="sapUiSmallMargin">
-			<f:content>
-				<Title  class="sapUiSmallMargin" titleStyle="H4" text="In the above code snippet, we now validate the entire response from our API. If the test fails, this will be added to the debugger of postman (More on this later)" wrapping="true" />
-			</f:content>
-		</f:Card>
-		<Text text="I made a mistake in my sample snippet, what is the right pm.expect statement?" class="sapUiTinyMarginBottom" />	
-		<Input id="myExpect" width="50%"  class="sapUiTinyMarginBottom" /> 
-		<Button text="Validate" press="onValidateFinal" class="sapUiLargeMarginBottom" />
-		<MessageStrip text="Success" showIcon="true" type="Success" visible="false" id="success" class="msgStrip" />
-		<MessageStrip text="Fail, try again" showIcon="true" type="Error" visible="false" id="failure" class="msgStrip" />
-	</VBox>
-</WizardStep>
-</Wizard>
+                    <WizardStep id="step1" title="Create Schema" validated="false">
+                        <VBox>
+                            <Text text="1. Continuing from last tutorial, let's add a schema validation" class="sapUiTinyMarginBottom" />
+                            <Text text="2. Go to https://jsonschema.net/home and click the continue as guest" class="sapUiTinyMarginBottom" />
+                            <Text text="3. Replace the content in the right window with the body of the result from postman and click submit" class="sapUiTinyMarginBottom" />
+                            <Image src="./assets/schema.PNG" class="sapUiTinyMarginBottom"/>
+                            <Text text="4. Press the copy to clipboard button on the left" class="sapUiTinyMarginBottom" />
+                            <Image src="./assets/copyToClipboard.PNG" class="sapUiTinyMarginBottom"/>
+                            <f:Card class="sapUiSmallMargin">
+                                <f:content>
+                                    <Title  class="sapUiSmallMargin" titleStyle="H4" text="The schema validation allows us to check on the response in regards to types, what is returned and it's values. So more comprehensive than a 'simple test'." wrapping="true" />
+                                </f:content>
+                            </f:Card>
+                            <Text text="What is the type of title?" class="sapUiTinyMarginBottom" />
+                            <Input id="myText" width="50%"  class="sapUiTinyMarginBottom" />
+                            <Button text="Validate" press="onValidate" class="sapUiLargeMarginBottom" />
+                        </VBox>
+                    </WizardStep>
+                    <WizardStep id="step2" title="Create Test" validated="false">
+                        <VBox>
+                            <Text text="1. Paste the following snippet to the end of your test" class="sapUiTinyMarginBottom" />
+                            <code:CodeEditor editable="false" value="{/text}" height="300px" />
+                            <Text text="2. Add the content from your clipboard after the = in the line 'const schema = ''" class="sapUiTinyMarginBottom" />
+                            <f:Card class="sapUiSmallMargin">
+                                <f:content>
+                                    <Title  class="sapUiSmallMargin" titleStyle="H4" text="In the above code snippet, we now validate the entire response from our API. If the test fails, this will be added to the debugger of postman (More on this later)" wrapping="true" />
+                                </f:content>
+                            </f:Card>
+                            <MessageStrip text="There is also a snippet for the tinyvalidator named 'Use Tiny Validator for JSON data', feel free to experiment with that" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+                            <Text text="I made a mistake in my sample snippet, correct the pm.expect statement to expect the result to be true and paste it below" class="sapUiTinyMarginBottom" />
+                            <Input id="myExpect" width="50%"  class="sapUiTinyMarginBottom" />
+                            <Button text="Validate" press="onValidateFinal" class="sapUiLargeMarginBottom" />
+                            <MessageStrip text="Success" showIcon="true" type="Success" visible="false" id="success" class="msgStrip" />
+                            <MessageStrip text="Fail, try again" showIcon="true" type="Error" visible="false" id="failure" class="msgStrip" />
+                        </VBox>
+                    </WizardStep>
+                </Wizard>
             </content>
         </Page>
-	</App>
+    </App>
 </mvc:View>

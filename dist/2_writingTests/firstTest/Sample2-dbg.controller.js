@@ -51,7 +51,7 @@ sap.ui.define(
         this.getView().byId("failure").setVisible(false);
         this._showFireworks();
         setTimeout(() => {
-          document.getElementById("content").classList.add("item-fade")
+          document.getElementById("myFrame").style.visibility = "visible"
         }, 200)
       }
       else {

@@ -7,7 +7,7 @@
   "homepage": "https://uxkjaer.github.io/postmantutorial",
   "scripts": {
     "build": "ui5 build",
-    "start": "ui5 serve --open index.html",
+    "start": "ui5 serve",
     "serve": "ws --compress -d dist",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
