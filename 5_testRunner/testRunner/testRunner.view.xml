@@ -1,4 +1,3 @@
-
 <mvc:View
 	controllerName="qldh.testRunner.testRunner"
 	xmlns="sap.m"
@@ -11,20 +10,22 @@
     <App id="app">
         <Page class="sapUiMediumMargin"  showHeader="false">
             <content>
-				<Wizard id="CreateProductWizard" class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
+                <Wizard id="CreateProductWizard" class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
 				complete="onValidate" finishButtonText="Validate">
-	<WizardStep id="step1" title="Create the Employee claim" validated="true">
-		<core:Fragment
-				fragmentName="qldh.testRunner.fragments.step1" type="XML" />
-	</WizardStep>
-	<WizardStep id="step2" title="Approve as Manager" validated="true">
-		<core:Fragment
+				<WizardStep id="step1" title="Create the final claim" validated="false">
+					<core:Fragment
+			fragmentName="qldh.testRunner.fragments.step1" type="XML" />
+				</WizardStep>
+                    <WizardStep id="step2" title="Create the Manager Approval" validated="true">
+                        <core:Fragment
 				fragmentName="qldh.testRunner.fragments.step2" type="XML" />
-	</WizardStep>					
-	
-</Wizard>
+                    </WizardStep>
+                    <WizardStep id="step3" title="Execute test runner" validated="true">
+                        <core:Fragment
+				fragmentName="qldh.testRunner.fragments.step3" type="XML" />
+                    </WizardStep>
+                </Wizard>
             </content>
         </Page>
     </App>
 </mvc:View>
-

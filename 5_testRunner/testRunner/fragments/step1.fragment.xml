@@ -3,20 +3,25 @@
 	xmlns:core="sap.ui.core"
 	xmlns:code="sap.ui.codeeditor"
 	> <VBox class="sapUiMediumMargin">
-		<core:HTML content="&lt;div class='sapMText' &gt;1. Click the &lt;img src='./assets/Button.PNG' /&gt; button next to the No Environment text and then click add&lt;/div&gt;" class="sapUiTinyMarginBottom" />
-		<Image src="./assets/environment.PNG" class="sapUiTinyMarginBottom"/>
-		<Text text="2. Name the environment HED" class="sapUiTinyMarginBottom" />
-		<Text text="3. Add a new variable called URL and set the initial value to 'https://myhr-dev.health.qld.gov.au'" class="sapUiTinyMarginBottom" />
-		<Text text="4. Add a second variable 'SAP-Client and add the value 120" class="sapUiTinyMarginBottom" />
-		<Image src="./assets/HED.PNG" class="sapUiTinyMarginBottom"/>
-		<Text text="5. Click Add" class="sapUiTinyMarginBottom" />
-		<Text text="6. In the Create Claim request we have saved in our collection, replace the hostname of the system with {{URL}} and the client number with {{SAP-Client}} " class="sapUiTinyMarginBottom" />
-		<Image src="./assets/url.PNG" class="sapUiTinyMarginBottom"/>
-		<MessageStrip text="Notice that the auto complete will help you with the variables and also show you the content of collection, global and environment variables when you hover over it." class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
-		<Text text="7. Now create another environment in the same fashion for HEG" class="sapUiTinyMarginBottom" />
-		<core:HTML content="&lt;div class='sapMText' &gt;1. Click the &lt;img src='./assets/Button.PNG' /&gt; button and then click &lt;img src='./assets/Copy.PNG' /&gt;" class="sapUiTinyMarginBottom" />
-		<Text text="8. Remember to change both the initial value and the current value of the URL" class="sapUiTinyMarginBottom" />
-		<Image src="./assets/predev.PNG" class="sapUiTinyMarginBottom"/>
+		<Text text="1. Add the below test to the already created Claim request" class="sapUiTinyMarginBottom" />
+		<code:CodeEditor editable="false"
+	value="{/test}"
+	height="400px" />
+	<MessageStrip text="The setTimeout(function(){}, 10000); function let's the test script wait for 10000 microseconds - 10 seconds before continuing, this is to enable the workflow to catch up. " class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+
+		<Text text="2. Duplicate the already created Claim request" class="sapUiTinyMarginBottom" />
+		<Image src="./assets/dublicate.PNG" class="sapUiTinyMarginBottom"/>
+
+		<Text text="2. Replace the content of the body tab with the code below" class="sapUiTinyMarginBottom" />
+		<code:CodeEditor editable="false"
+	value="{/code}"
+	height="400px" />
+		<Text text="What does that test do? (More than one answer is correct)" class="sapUiTinyMarginBottom" />
+		<CheckBox id="1" text="Checks to see if the work item is filled out"  />
+		<CheckBox id="2" text="Adds the guid as a collection variable" />
+		<CheckBox id="3" text="Brews me a cup of needed coffee" />
+		<CheckBox id="4" text="Adds the guid as a local variable" />
+		<Button text="Validate Result" press="onValidateStep1" class="sapUiLargeMarginBottom" />
 
 	</VBox>
 </core:FragmentDefinition>
