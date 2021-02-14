@@ -3,7 +3,7 @@
 	xmlns:core="sap.ui.core"
 	xmlns:code="sap.ui.codeeditor"
 	> <VBox class="sapUiMediumMargin">
-		<core:HTML content="&lt;div class='sapMText' &gt;1. Click the &lt;img src='./assets/Button.PNG' /&gt; button next to the No Environment text and then click add&lt;/div&gt;" class="sapUiTinyMarginBottom" />
+		<Text text="1. Click the Environment tab and click the + button" class="sapUiTinyMarginBottom" />
 		<Image src="./assets/environment.PNG" class="sapUiTinyMarginBottom"/>
 		<Text text="2. Name the environment HED" class="sapUiTinyMarginBottom" />
 		<Text text="3. Add a new variable called URL and set the initial value to 'https://myhr-dev.health.qld.gov.au'" class="sapUiTinyMarginBottom" />
@@ -14,8 +14,10 @@
 		<Image src="./assets/url.PNG" class="sapUiTinyMarginBottom"/>
 		<MessageStrip text="Notice that the auto complete will help you with the variables and also show you the content of collection, global and environment variables when you hover over it." class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
 		<Text text="7. Now create another environment in the same fashion for HEG" class="sapUiTinyMarginBottom" />
-		<core:HTML content="&lt;div class='sapMText' &gt;1. Click the &lt;img src='./assets/Button.PNG' /&gt; button and then click &lt;img src='./assets/Copy.PNG' /&gt;" class="sapUiTinyMarginBottom" />
-		<Text text="8. Remember to change both the initial value and the current value of the URL" class="sapUiTinyMarginBottom" />
+		<Text text="8. Click the environment tab and click the ... next to HED and then duplicate" class="sapUiTinyMarginBottom" />
+		<Image src="./assets/Copy.PNG" class="sapUiTinyMarginBottom"/>
+
+		<Text text="9. Remember to change both the initial value and the current value of the URL" class="sapUiTinyMarginBottom" />
 		<Image src="./assets/predev.PNG" class="sapUiTinyMarginBottom"/>
 
 	</VBox>

@@ -4,6 +4,21 @@
 
 	xmlns:core="sap.ui.core">
 	<VBox>
-	
+		<Text text="1. Click the collection and choose run" class="sapUiTinyMarginBottom" />
+		<Image src="./assets/run.PNG" class="sapUiLargeMarginBottom"/>
+		<Text text="2. Now select the run button again" class="sapUiTinyMarginBottom" />
+		<Text text="3. Now tick the following boxes in the runner" class="sapUiTinyMarginBottom" />
+		<CheckBox text='Save Responses' selected='true' editable='false' />
+		<CheckBox text='Keep Variable values' selected='true' editable='false' />
+		<CheckBox text='Run collection without using stored cookies' selected='true' editable='false' />
+		<MessageStrip text="You also have options to only run a subset of your API's by simply deselecting them on the right hand side or how many times you want your test suite to be executed" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+		<Image src="./assets/runner.png" class="sapUiLargeMarginBottom"/>
+		<Text text="4. Click the Run button again" class="sapUiTinyMarginBottom" />
+		<Text text="Did it work?" class="sapUiTinyMarginBottom" />
+        <CheckBox id="a" text="No" select=".onSelect('b')" />
+        <CheckBox id="b" text="Yes" select=".onSelect('a')"  class="sapUiLargeMarginBottom"/>
+        <MessageStrip text="Congratulations, you have completed the Postman tutorial" showIcon="true" type="Success" visible="false" id="success" class="msgStrip" />
+        <MessageStrip text="Failure, try again" showIcon="true" type="Error" visible="false" id="failure" class="msgStrip" />
+
     </VBox>
 </core:FragmentDefinition>

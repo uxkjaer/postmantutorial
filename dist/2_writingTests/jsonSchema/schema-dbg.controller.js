@@ -9,11 +9,14 @@ sap.ui.define(
 
     return Controller.extend("qldh.jsonSchema.schema", {
       onInit: function () {
-        var text = `var result = tv4.validateResult(pm.response.json(), schema) 
-        if(!result.valid){
-          console.log(result)
-        }
-        pm.expect(result.valid).to.be.false
+        var text = `const schema = 
+
+        var result = tv4.validateResult(pm.response.json(), schema) 
+                if(!result.valid){
+                  console.log(result)
+                }
+                pm.expect(result.valid).to.be.false
+                
         `;
         this.setModel(
           new JSONModel({

@@ -4,6 +4,7 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:f="sap.f"
 	xmlns:card="sap.f.cards"
+	xmlns:core="sap.ui.core"
 	displayBlock="true">
 	<App id="app">
 		<VBox class="sapUiMediumMargin">
@@ -13,7 +14,7 @@
 					<Title  class="sapUiSmallMargin" titleStyle="H4" text="Download and install Postman to get started." wrapping="true" />
 				</f:content>
 			</f:Card>
-			<Image id="download" src="../common/assets/download.PNG" class="sapUiTinyMarginBottom" press="onDownload" alt="Download here"/>
+			<core:HTML content="&lt;a  href='https://dl.pstmn.io/download/latest/win64' &gt;&lt;img src='../common/assets/download.PNG' /&gt;&lt;/a&gt;" />
 		</VBox>
 	</App>
 </mvc:View>
