@@ -14,7 +14,7 @@
 					<Title  class="sapUiSmallMargin" titleStyle="H4" text="Download and install Postman to get started." wrapping="true" />
 				</f:content>
 			</f:Card>
-			<core:HTML content="&lt;a  href='https://dl.pstmn.io/download/latest/win64' &gt;&lt;img src='../common/assets/download.PNG' /&gt;&lt;/a&gt;" />
+			<core:HTML content="&lt;a  href='https://dl.pstmn.io/download/latest/win64' &gt;&lt;img src='/common/assets/download.PNG' /&gt;&lt;/a&gt;" />
 		</VBox>
 	</App>
 </mvc:View>
