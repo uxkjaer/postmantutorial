@@ -10,13 +10,13 @@
 	<MessageStrip text="The setTimeout(function(){}, 10000); function let's the test script wait for 10000 microseconds - 10 seconds before continuing, this is to enable the workflow to catch up. " class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
 
 		<Text text="2. Duplicate the already created Claim request" class="sapUiTinyMarginBottom" />
-		<Image src="./assets/dublicate.PNG" class="sapUiTinyMarginBottom"/>
+		<Image src="./assets/duplicate.PNG" class="sapUiTinyMarginBottom"/>
 
 		<Text text="2. Replace the content of the body tab with the code below" class="sapUiTinyMarginBottom" />
 		<code:CodeEditor editable="false"
 	value="{/code}"
 	height="400px" />
-		<Text text="What does that test do? (More than one answer is correct)" class="sapUiTinyMarginBottom" />
+		<Text text="What does that test created in step 1 do? (More than one answer is correct)" class="sapUiTinyMarginBottom" />
 		<CheckBox id="1" text="Checks to see if the work item is filled out"  />
 		<CheckBox id="2" text="Adds the guid as a collection variable" />
 		<CheckBox id="3" text="Brews me a cup of needed coffee" />

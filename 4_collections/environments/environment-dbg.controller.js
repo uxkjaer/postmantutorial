@@ -21,6 +21,10 @@ sap.ui.define(
         
         }));
       },
+
+      onSelect: function(sId){
+        this.byId(sId.toString()).setSelected(false)
+      }, 
       onValidate: function () {
         if (this.byId("2").getSelected() === true) {
           
