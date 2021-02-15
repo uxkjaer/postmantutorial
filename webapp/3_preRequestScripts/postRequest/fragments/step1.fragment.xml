@@ -5,7 +5,10 @@
 	>
 	<VBox>
 		<Text text="1. Log on to MyHR in HED with user 250004 and password Myhr123456 using the link below" class="sapUiTinyMarginBottom" />	
-				<Link text="MYHR-dev" target="_blank" href="https://myhr-dev.health.qld.gov.au/?sap-ui-debug=qldh#Shell-home" />
+			<Text text="Prerequisite, please go back to your settings via file --> Settings and unset this flag"		/>
+				<Image src="./assets/ssl.PNG" class="sapUiTinyMarginBottom"/>
+
+		<Link text="MYHR-dev" target="_blank" href="https://myhr-dev.health.qld.gov.au/?sap-ui-debug=qldh#Shell-home" />
 				<Text text="2. Go to Submit Form and search for mileage, now click the form" class="sapUiTinyMarginBottom" />	
 				<MessageStrip text="Notice that we have added the url parameter '?sap-ui-debug=qldh. This enables us to view the uncompressed source code and easier work with the application" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
 				<Text text="3. Open the developer tools by pressing F12" class="sapUiTinyMarginBottom" />	

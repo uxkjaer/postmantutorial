@@ -54,6 +54,7 @@ sap.ui.define(
             "ZCdReason": "Going soem where",
             "ZCdTotClaim": "6.4",
             "ZLocation": "Work",
+            "Workitem":"{{Workitem}}",
             "ZPlans": 30000004,
             "ZRequestor": "MGR",
             "ZVehtype": "CAR",
@@ -68,7 +69,7 @@ sap.ui.define(
                 "ZCdKmClaimed": "8.00"
               }
             ]
-          }
+          }          
           `,
           test: `
           pm.test('Work Item is filled out', () => {
@@ -81,6 +82,22 @@ sap.ui.define(
     setTimeout(function(){}, 10000);
 
         `,
+
+        manager: `
+        
+        let headers = {};
+        headers['Authorization'] =  'Basic ' + btoa('250001' + ":" + 'Myhr1234');
+        headers['x-csrf-token'] = 'fetch';
+        const echoPostRequest = {
+          url: 'https://myhr-dev.health.qld.gov.au/sap/opu/odata/sap/ZHR_MV_ALLOW_CLAIM_SRV/hasValidWagetypes?sap-client=120&saml2=disabled',
+          method: 'GET',
+          header: headers,
+        };
+        pm.sendRequest(echoPostRequest, function (err, res) {
+          let token = res.headers.find((oHeader) => oHeader.key === 'x-csrf-token')
+          pm.collectionVariables.set('csrf-token', token.value)
+        });
+        `,
         latestWork: `
         pm.test("Status code is 200", function () {
           pm.response.to.have.status(200);
@@ -92,7 +109,7 @@ sap.ui.define(
           pm.collectionVariables.set('LatestWorkitem', jsonData[0].latestWiId)
           console.log(pm.collectionVariables.get('LatestWorkitem'))
       });`
-        
+     
         }));
       },
       
@@ -110,34 +127,23 @@ sap.ui.define(
         this.byId("step1").setValidated(validated)
       },
       onValidate: function () {
-      var text = JSON.stringify({
-        userId: 1,
-        id: 1,
-        title:
-          "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-        body:
-          "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto",
-      });
-      var myText = this.getView().byId("myText").getValue();
-      try {
-        myText = JSON.stringify(JSON.parse(myText));
-      } catch (error) {
-        this.getView().byId("failure").setVisible(true);
-        return;
-      }
+        if (this.byId("b").getSelected() === true) {
+          
+          this.getView().byId("success").setVisible(true);
+          this.getView().byId("failure").setVisible(false);
+          this._showFireworks();
+          setTimeout(() => {
+            document.getElementById("myFrame").style.visibility = "visible"
+          }, 200)
+        } else {
+          this.getView().byId("failure").setVisible(true);
+          this.getView().byId("success").setVisible(false);
+        }
+      },
 
-      if (myText === text) {
-        this.getView().byId("success").setVisible(true);
-        this.getView().byId("failure").setVisible(false);
-        this._showFireworks();
-        setTimeout(() => {
-          document.getElementById("content").classList.add("item-fade")
-        }, 200)
-      } else {
-        this.getView().byId("failure").setVisible(true);
-        this.getView().byId("success").setVisible(false);
-      }
-    }
+      onSelect: function(sId){
+        this.byId(sId.toString()).setSelected(false)
+      }, 
   });
 }
 );
