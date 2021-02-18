@@ -108,7 +108,12 @@ sap.ui.define(
           pm.expect(jsonData[0].latestWiId).to.not.eql('');
           pm.collectionVariables.set('LatestWorkitem', jsonData[0].latestWiId)
           console.log(pm.collectionVariables.get('LatestWorkitem'))
-      });`
+      });`,
+      instanceID: `        pm.test('Work Item is filled out', () => {
+        var jsonData = pm.response.json();
+        pm.variables.set('Workitem', jsonData.d.InstanceID)
+     
+})`
      
         }));
       },

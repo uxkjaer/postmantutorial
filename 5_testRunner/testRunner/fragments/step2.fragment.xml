@@ -31,6 +31,7 @@
         <Text text="12. Add a test to check the status code is 200 by using the snippet and don't forget to save" class="sapUiTinyMarginBottom" />
         <Image src="./assets/200.PNG" class="sapUiLargeMarginBottom"/>
         <Text text="13. Add the code below as a prequest script " class="sapUiTinyMarginBottom" />
+        <Text text="14. Now duplicate the logout request from the Employee folder  into the manager folder."
         <code:CodeEditor editable="false"
         value="{/manager}"
         height="300px" />

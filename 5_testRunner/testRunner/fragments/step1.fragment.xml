@@ -16,6 +16,7 @@
 		<code:CodeEditor editable="false"
 	value="{/code}"
 	height="400px" />
+		<Text text="3. Create an additional request named logout as a GET request and add the following URL 'https://myhr-dev.health.qld.gov.au/sap/public/bc/icf/logoff?sap-client=120'" />
 		<Text text="What does that test created in step 1 do? (More than one answer is correct)" class="sapUiTinyMarginBottom" />
 		<CheckBox id="1" text="Checks to see if the work item is filled out"  />
 		<CheckBox id="2" text="Adds the guid as a collection variable" />
