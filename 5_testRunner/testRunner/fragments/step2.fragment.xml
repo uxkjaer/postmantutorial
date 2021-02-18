@@ -8,34 +8,41 @@
         <Image src="./assets/folder.PNG" class="sapUiTinyMarginBottom"/>
         <Text text="2. Name the folder employee and move the requests into this folder" class="sapUiTinyMarginBottom" />
 
-        <Text text="3. Create another folder and name it manager." class="sapUiTinyMarginBottom" />
-        <Text text="4. When creating the manager folder add the " class="sapUiTinyMarginBottom" />
+        <Text text="3. Create another folder and name it manager. " class="sapUiTinyMarginBottom" />
+        <Text text="4. When creating the manager folder add the authentication with 250001 and password 'Myhr1234'" class="sapUiTinyMarginBottom" />
         <Image src="./assets/manager.PNG" class="sapUiTinyMarginBottom"/>
-        <Text text="5. Add a new request to the manager folder and name it 'get latest workitem'" class="sapUiTinyMarginBottom" />
+        <Text text="5. Add a new request to the manager folder and name it 'WorkitemID'" class="sapUiTinyMarginBottom" />
+        <Text text="6. Add the follwing URL 'https://myhr-dev.health.qld.gov.au/sap/opu/odata/sap/ZHR_TASK_PROCESSING_SRV;v=0002;mo/GetInstanceID?GUID=%27{{$guid}}%27&$format=json&sap-client=120'" />
+        <MessageStrip text="This will get the instance id from the GUID. Just to make sure we have it. Add below into the test tab" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+        <code:CodeEditor editable="false"
+        value="{/instanceID}"
+        height="300px" />
+        <Text text="7. Add a new request to the manager folder and name it 'get latest workitem'" class="sapUiTinyMarginBottom" />
         <Image src="./assets/request.PNG" class="sapUiTinyMarginBottom"/>
-        <Text text="6. Add the following url 'https://ecc-dev.wfm.health.qld.gov.au/zqh/rest/myhr_form/zformfields?sap-client=120&amp;WI_ID={{Workitem}}'" class="sapUiTinyMarginBottom" />
-        <Text text="7. Change the authentication to basic auth and user ZTSTPATAS01 with password spring17" class="sapUiTinyMarginBottom" />
-        <Text text="8. Add the below test to the test tab. This stores the latest work item for our approval" class="sapUiTinyMarginBottom" />
+        <Text text="8. Add the following url 'https://ecc-dev.wfm.health.qld.gov.au/zqh/rest/myhr_form/zformfields?sap-client=120&amp;WI_ID={{Workitem}}'" class="sapUiTinyMarginBottom" />
+        <!-- <Text text="7. Change the authentication to basic auth and user ZTSTPATAS01 with password spring17" class="sapUiTinyMarginBottom" /> -->
+        <Text text="9. Add the below test to the test tab. This stores the latest work item for our approval" class="sapUiTinyMarginBottom" />
         <code:CodeEditor editable="false"
         value="{/latestWork}"
         height="300px" />
         <MessageStrip text="This test saves the latest workitem in a variable called LatestWorkItem" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
 
-        <Text text="9. Disable the cookie jar for the request" class="sapUiTinyMarginBottom" />
+        <Text text="10. Disable the cookie jar for the request" class="sapUiTinyMarginBottom" />
         <Image src="./assets/disable.PNG" class="sapUiTinyMarginBottom"/>
 
         <MessageStrip text="Because postman stores the user session as a cookie, we need to clear out all cookies so we can login in now as a manager instead, this clears out the cookies related to HED" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
 
-        <Text text="10. Create a new request and name it 'Approve as Manager'" class="sapUiTinyMarginBottom" />
-        <Text text="11. Add the following URL https://myhr-dev.health.qld.gov.au/sap/opu/odata/sap/ZHR_TASK_PROCESSING_SRV;v=0002;mo/Decision?sap-client=120&amp;SAP__Origin='RELATEDECC_TGW'&amp;InstanceID='{{LatestWorkitem}}'&amp;DecisionKey='0001'&amp;Comments='Test Postman Tutorial'" class="sapUiTinyMarginBottom" />
-        <Text text="12. Add a test to check the status code is 200 by using the snippet and don't forget to save" class="sapUiTinyMarginBottom" />
+        <Text text="11. Create a new request and name it 'Approve as Manager'" class="sapUiTinyMarginBottom" />
+        <Text text="12. Add the following URL https://myhr-dev.health.qld.gov.au/sap/opu/odata/sap/ZHR_TASK_PROCESSING_SRV;v=0002;mo/Decision?sap-client=120&amp;SAP__Origin='RELATEDECC_TGW'&amp;InstanceID='{{LatestWorkitem}}'&amp;DecisionKey='0001'&amp;Comments='Test Postman Tutorial'" class="sapUiTinyMarginBottom" />
+        <Text text="13. Add a test to check the status code is 200 by using the snippet and don't forget to save" class="sapUiTinyMarginBottom" />
         <Image src="./assets/200.PNG" class="sapUiLargeMarginBottom"/>
-        <Text text="13. Add the code below as a prequest script " class="sapUiTinyMarginBottom" />
-        <Text text="14. Now duplicate the logout request from the Employee folder  into the manager folder." class="sapUiTinyMarginBottom"/>
+        <Text text="14. Add the code below as a prequest script " class="sapUiTinyMarginBottom" />
+        
         <code:CodeEditor editable="false"
         value="{/manager}"
         height="300px" />
-        <Text text="14. Disable the cookie jar for the request" class="sapUiTinyMarginBottom" />
+        <Text text="15. Now duplicate the logout request from the Employee folder  into the manager folder." class="sapUiTinyMarginBottom"/>
+        <Text text="16. Disable the cookie jar for the request" class="sapUiTinyMarginBottom" />
         <Image src="./assets/disable.PNG" class="sapUiLargeMarginBottom"/>
     </VBox>
 </core:FragmentDefinition>
