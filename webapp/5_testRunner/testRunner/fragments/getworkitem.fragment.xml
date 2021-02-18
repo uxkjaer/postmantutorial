@@ -1,0 +1,17 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:code="sap.ui.codeeditor"
+
+	xmlns:core="sap.ui.core">
+	<VBox>
+		<Text text="1. Create a new request in the manager folder and name it Get WorkItem" class="sapUiTinyMarginBottom" />
+		<Text text="2. Paste the following URL in 'https://myhr-dev.health.qld.gov.au/sap/opu/odata/sap/ZHR_TASK_PROCESSING_SRV;v=0002;mo/GetInstanceID?GUID=%27{{$guid}}%27&amp;$format=json&amp;sap-client=120'" class="sapUiTinyMarginBottom" />
+		<Text text="3. Add the following in as a test case" class="sapUiTinyMarginBottom" />
+		<code:CodeEditor editable="false"
+	value="{/instanceID}"
+	height="400px" />
+	<Text text="4. Drag it to the top of the folder" class="sapUiTinyMarginBottom" />
+	<Image src="./assets/top.PNG" class="sapUiLargeMarginBottom"/>
+
+    </VBox>
+</core:FragmentDefinition>

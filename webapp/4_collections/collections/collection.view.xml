@@ -15,7 +15,7 @@
 					<FormattedText htmlText="3. Click the &lt;span style='font-size: 24px;'&gt;&#10003;&lt;/span&gt; button and press Save" class="sapUiTinyMarginBottom" />
 					<Text text="Click the ... on your collection and choose edit " class="sapUiTinyMarginBottom" />
 					<Image src="./assets/edit.PNG" class="sapUiTinyMarginBottom"/>
-					<Text text="3. Click the Authorization tab and set it to Basic Auth with user 250004 and password Myhr1234. Press Update" class="sapUiTinyMarginBottom" />
+					<Text text="3. Click the Authorization tab and set it to Basic Auth with user 250004 and password Myhr1234. Press Save" class="sapUiTinyMarginBottom" />
 					<Text text="4. On your request, click the Authorization tab and set it to inherit auth from parent" class="sapUiTinyMarginBottom" />
 					<Image src="./assets/parent.PNG" class="sapUiTinyMarginBottom"/>
 					<MessageStrip text="Now we don't have to maintain the Authorization every time and can rely on the collections Authorization instead" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />

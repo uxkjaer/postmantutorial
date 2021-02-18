@@ -20,7 +20,11 @@
                         <core:Fragment
 				fragmentName="qldh.testRunner.fragments.step2" type="XML" />
                     </WizardStep>
-                    <WizardStep id="step3" title="Execute test runner" validated="true">
+                    <WizardStep id="step3" title="Get workitem ID" validated="true">
+                        <core:Fragment
+				fragmentName="qldh.testRunner.fragments.getworkitem" type="XML" />
+                    </WizardStep>
+                    <WizardStep id="step4" title="Execute test runner" validated="true">
                         <core:Fragment
 				fragmentName="qldh.testRunner.fragments.step3" type="XML" />
                     </WizardStep>
