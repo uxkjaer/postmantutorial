@@ -16,7 +16,7 @@
 		<MessageStrip text="This fetches a Cross-site request forgery token and saves it in a variable called csrf-token" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
 		<Text text="4. Click the Headers tab and replace the value of the x-csrf-token with {{csrf-token}}" class="sapUiTinyMarginBottom" />	
 		<Image src="./assets/token.PNG" class="sapUiTinyMarginBottom"/>
-		<Text text="5. Deselect the cookies tab" class="sapUiTinyMarginBottom" />	
+		<Text text="5. Deselect the cookies" class="sapUiTinyMarginBottom" />	
 		<Text text="6. Click the Authorization tab and set the type to Basic Auth" class="sapUiTinyMarginBottom" />	
 		<Text text="7. Set Username = 250004 and Password = Myhr1234" class="sapUiTinyMarginBottom" />	
 		<Image src="./assets/auth.PNG" class="sapUiTinyMarginBottom"/>

@@ -11,12 +11,14 @@ sap.ui.define(
       onInit: function () {
         var text = `const schema = 
 
+
+        pm.test("Response has the right types and values", function() {
         var result = tv4.validateResult(pm.response.json(), schema) 
                 if(!result.valid){
                   console.log(result)
                 }
                 pm.expect(result.valid).to.be.false
-                
+              })
         `;
         this.setModel(
           new JSONModel({
