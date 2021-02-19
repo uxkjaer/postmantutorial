@@ -19,8 +19,8 @@
 					<Text text="4. On your request, click the Authorization tab and set it to inherit auth from parent" class="sapUiTinyMarginBottom" />
 					<Image src="./assets/parent.PNG" class="sapUiTinyMarginBottom"/>
 					<MessageStrip text="Now we don't have to maintain the Authorization every time and can rely on the collections Authorization instead" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
-					<Text text="5. Click the PreRequest Script tab and change line 12 to pm.collectionVariables.set('csrf-token', token.value)" class="sapUiTinyMarginBottom" />
-					<MessageStrip text="This way the x-csrf-token is set on the collection and we don't have to request it again" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+					<Text text="5. Click the PreRequest Script tab and change line 12 to pm.collectionVariables.set('csrf-token', token.value) and also line 15 with pm.collectionVariables.set('today', Date.now())" class="sapUiTinyMarginBottom" />
+					<MessageStrip text="This way the x-csrf-token and today variable is set on the collection and we don't have to request it again" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
 					<Text text="If you set the same variable in two different scopes local and collection, which one is used?" class="sapUiTinyMarginBottom" />
 					<CheckBox id="1" text="The local one used by pm.variables.set" select=".onSelect('2')" />
 					<CheckBox id="2" text="The one from the collection set by pm.collectionVariables.set" select=".onSelect('1')" />

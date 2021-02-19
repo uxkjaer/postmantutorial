@@ -23,10 +23,10 @@ sap.ui.define(
             "Comments": "",
             "LeadObjectType": "P",
             "CompanyCode": "2400",
-            "Requestortype": "[{\"name\":\"MGR\",\"value\":\"Supervisor\"},{\"name\":\"EMP\",\"value\":\"Employee\"}]",
+            "Requestortype": "[{'name':'MGR','value':'Supervisor'},'name':'EMP','value':'Employee'}]",
             "CentralPerson": 250004,
-            "Vehtype": "[{\"name\":\"CAR\",\"value\":\"Car\"},{\"name\":\"MCYCLE\",\"value\":\"Motorcycle\"}]",
-            "EffectiveDate": "/Date({{$isoTimestamp}})/",
+            "Vehtype": "[{'name':'CAR','value':'Car'},{'name':'MCYCLE','value':'Motorcycle'}]",
+            "EffectiveDate": "/Date(1613656800000)/",
             "Employeecertification": true,
             "Event": "SUBMIT",
             "FormName": "",
@@ -61,7 +61,7 @@ sap.ui.define(
             "ZWagetype": "2M42",
             "MileageRecordSet": [
               {
-                "ZCdDate": "/Date({{$isoTimestamp}})/",
+                "ZCdDate": "/Date(1613656800000)/",
                 "ZCdTown": "Hoem",
                 "ZCdTownEnd": "Work",
                 "ZCdTotalkm": "12.00",
@@ -79,7 +79,7 @@ sap.ui.define(
             pm.variables.set('$guid', jsonData.d.Guid)
     })
 
-    setTimeout(function(){}, 10000);
+    setTimeout(function(){}, 3000);
 
         `,
 
@@ -95,7 +95,7 @@ sap.ui.define(
         };
         pm.sendRequest(echoPostRequest, function (err, res) {
           let token = res.headers.find((oHeader) => oHeader.key === 'x-csrf-token')
-          pm.collectionVariables.set('csrf-token', token.value)
+          pm.variables.set('csrf-token', token.value)
         });
         `,
         latestWork: `

@@ -8,7 +8,7 @@
         <code:CodeEditor editable="false"
 	value="{/test}"
 	height="400px" />
-        <MessageStrip text="The setTimeout(function(){}, 10000); function let's the test script wait for 10000 microseconds - 10 seconds before continuing, this is to enable the workflow to catch up. " class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+        <MessageStrip text="The setTimeout(function(){}, 3000); function let's the test script wait for 3000 microseconds - 3 seconds before continuing, this is to enable the workflow to catch up. " class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
         <Text text="2. Duplicate the already created Claim request" class="sapUiTinyMarginBottom" />
         <Image src="./assets/duplicate.PNG" class="sapUiTinyMarginBottom"/>
         <Text text="2. Replace the content of the body tab with the code below" class="sapUiTinyMarginBottom" />
