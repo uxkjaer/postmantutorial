@@ -26,7 +26,7 @@ sap.ui.define(
             "Requestortype": "[{'name':'MGR','value':'Supervisor'},'name':'EMP','value':'Employee'}]",
             "CentralPerson": 250004,
             "Vehtype": "[{'name':'CAR','value':'Car'},{'name':'MCYCLE','value':'Motorcycle'}]",
-            "EffectiveDate": "/Date({{$isoTimestamp}})/",
+            "EffectiveDate": "/Date(1613656800000)/",
             "Employeecertification": true,
             "Event": "SUBMIT",
             "FormName": "",
@@ -61,7 +61,7 @@ sap.ui.define(
             "ZWagetype": "2M42",
             "MileageRecordSet": [
               {
-                "ZCdDate": "/Date({{$isoTimestamp}})/",
+                "ZCdDate": "/Date(1613656800000)/",
                 "ZCdTown": "Hoem",
                 "ZCdTownEnd": "Work",
                 "ZCdTotalkm": "12.00",
