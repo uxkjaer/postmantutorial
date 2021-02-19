@@ -16,7 +16,7 @@
                         <VBox>
                             <Text text="1. Continuing from last tutorial, let's add a schema validation" class="sapUiTinyMarginBottom" />
                             <Text text="2. Go to https://jsonschema.net/home and click the continue as guest" class="sapUiTinyMarginBottom" />
-                            <Text text="3. Replace the content in the right window with the body of the result from postman and click submit" class="sapUiTinyMarginBottom" />
+                            <Text text="3. Replace the content in the left window with the body of the result from postman and click submit" class="sapUiTinyMarginBottom" />
                             <Image src="./assets/schema.PNG" class="sapUiTinyMarginBottom"/>
                             <Text text="4. Press the copy to clipboard button on the left" class="sapUiTinyMarginBottom" />
                             <Image src="./assets/copyToClipboard.PNG" class="sapUiTinyMarginBottom"/>

@@ -17,7 +17,7 @@
 				height="200px" />
 				<MessageStrip text="pm.variables enables us to save variables dynamically. Here we save in a local scope" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
 
-				<Text text="3. Now change the URL to replace the one with {{index}}" class="sapUiTinyMarginBottom" />	
+				<Text text="3. Now change the URL to replace the numbe 1 with {{index}}" class="sapUiTinyMarginBottom" />	
 				<MessageStrip text="the {{ }} helps Postman understand to look for a variable. Index is the name you just gave in the pre request script." class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
 				
 				<Text text="4. Click the Send button " class="sapUiTinyMarginBottom" />	

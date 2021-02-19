@@ -105,7 +105,7 @@ Luigi.setConfig({
           },
           {
             pathSegment: "collections",
-            label: "Colletions",
+            label: "Collections",
             icon: "paper-plane",
             viewUrl: "4_collections/collections/collection.html",
             category: {

@@ -28,7 +28,7 @@
 				<Text text="7. Go back to the sources tab and press F8" class="sapUiTinyMarginBottom" />	
 				<Text text="8. Add myself as claim for and the date as todays date. Click the Start Claim button " class="sapUiTinyMarginBottom" />	
 				<Image src="./assets/claim.png" class="sapUiTinyMarginBottom"/>
-				<Text text="9. In the networks tab, filter the requets by ClaimHeaderSet and copy it as a cURL as done in exersice Import Request" class="sapUiTinyMarginBottom" />	
+				<Text text="9. In the networks tab, filter the requets by ClaimHeaderSet and copy it as a cURL (bash) as done in exersice Import Request" class="sapUiTinyMarginBottom" />	
 				<Image src="./assets/post.PNG" class="sapUiTinyMarginBottom"/>
 				<Text text="What does a batch request mean?" class="sapUiTinyMarginBottom" />	
 				<RadioButtonGroup id="rbg2" class="sapUiMediumMarginBottom" selectedIndex="2">

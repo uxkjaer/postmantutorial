@@ -13,12 +13,17 @@
 	value="{/code}"
 	height="400px" />
         <Image src="./assets/pre.PNG" class="sapUiTinyMarginBottom"/>
-        <Text text="5. Click the Authorization tab and set the type to No Auth" class="sapUiTinyMarginBottom" />
-        <Text text="6. Go to the Headers tab and add a header named 'Authorization' and set the value to {{auth}}" class="sapUiTinyMarginBottom" />
+        <Text text="5. Also change line 8 and replace it with the line below" />
+        <code:CodeEditor editable="false"
+        value="{/url}"
+        height="400px" />
+        <MessageStrip text="Now our prerequest script will use the same environment variables for the fetching of the csrf-token" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
+        <Text text="6. Click the Authorization tab and set the type to No Auth" class="sapUiTinyMarginBottom" />
+        <Text text="7. Go to the Headers tab and add a header named 'Authorization' and set the value to {{auth}}" class="sapUiTinyMarginBottom" />
         <Image src="./assets/auth.PNG" class="sapUiTinyMarginBottom"/>
         <MessageStrip text="Now we use the username and password from the environment as an authentication instead of from the collection. This header would need to be maintained on all subsequent requests as well in the collection" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
-        <Text text="7. Add the same variables to the environment for HEG" class="sapUiTinyMarginBottom" />
-        <Text text="8. Select the HEG environment and execute your request" class="sapUiTinyMarginBottom" />
+        <Text text="8. Add the same variables to the environment for HEG" class="sapUiTinyMarginBottom" />
+        <Text text="9. Select the HEG environment and execute your request" class="sapUiTinyMarginBottom" />
         <Text text="Did it work?" class="sapUiTinyMarginBottom" />
         <CheckBox id="1" text="No" select=".onSelect('2')" />
         <CheckBox id="2" text="Yes" select=".onSelect('1')" />
