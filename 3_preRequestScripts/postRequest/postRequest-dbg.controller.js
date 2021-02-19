@@ -20,6 +20,8 @@ sap.ui.define(
             let token = res.headers.find((oHeader) => oHeader.key === 'x-csrf-token')
             pm.variables.set('csrf-token', token.value)
           });
+
+          pm.variables.set("today", Date.now())
           `,
           test: `
           pm.test("Work item is not Zero", function () {

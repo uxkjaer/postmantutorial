@@ -79,7 +79,7 @@ sap.ui.define(
             pm.variables.set('$guid', jsonData.d.Guid)
     })
 
-    setTimeout(function(){}, 10000);
+    setTimeout(function(){}, 3000);
 
         `,
 
@@ -95,7 +95,7 @@ sap.ui.define(
         };
         pm.sendRequest(echoPostRequest, function (err, res) {
           let token = res.headers.find((oHeader) => oHeader.key === 'x-csrf-token')
-          pm.collectionVariables.set('csrf-token', token.value)
+          pm.variables.set('csrf-token', token.value)
         });
         `,
         latestWork: `
