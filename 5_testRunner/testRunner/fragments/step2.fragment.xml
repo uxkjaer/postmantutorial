@@ -12,7 +12,7 @@
         <Text text="4. When creating the manager folder add the authentication with 250001 and password 'Myhr1234'" class="sapUiTinyMarginBottom" />
         <Image src="./assets/manager.PNG" class="sapUiTinyMarginBottom"/>
         <Text text="5. Add a new request to the manager folder and name it 'WorkitemID'" class="sapUiTinyMarginBottom" />
-        <Text text="6. Add the follwing URL 'https://myhr-dev.health.qld.gov.au/sap/opu/odata/sap/ZHR_TASK_PROCESSING_SRV;v=0002;mo/GetInstanceID?GUID=%27{{$guid}}%27&$format=json&sap-client=120'" />
+        <Text text="6. Add the follwing URL 'https://myhr-dev.health.qld.gov.au/sap/opu/odata/sap/ZHR_TASK_PROCESSING_SRV;v=0002;mo/GetInstanceID?GUID=%27{{$guid}}%27&amp;$format=json&amp;sap-client=120'" />
         <MessageStrip text="This will get the instance id from the GUID. Just to make sure we have it. Add below into the test tab" class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
         <code:CodeEditor editable="false"
         value="{/instanceID}"
