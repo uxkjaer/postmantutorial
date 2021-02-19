@@ -17,6 +17,8 @@ sap.ui.define(
             var jsonData = pm.response.json();
             pm.expect(jsonData.Workitem).not.eql("0000000000000");
         });
+        `,
+        url: `url: pm.environment.get('URL') +'/sap/opu/odata/sap/ZHR_MV_ALLOW_CLAIM_SRV/hasValidWagetypes?sap-client=' pm.environment.get("SAP-Client") +'&saml2=disabled',
         `
         
         }));
