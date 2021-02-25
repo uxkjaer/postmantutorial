@@ -43,10 +43,6 @@
         height="300px" />
         <Text text="15. Also add the csrf-token as a header to the request" />
         <Image src="./assets/token.PNG" class="sapUiLargeMarginBottom"/>
-
-        <Text text="16. Disable the cookie jar for the request" class="sapUiTinyMarginBottom" />
-        <Image src="./assets/disable.PNG" class="sapUiTinyMarginBottom"/>
-
         <Text text="17. Now duplicate the logout request from the Employee folder  into the manager folder." class="sapUiLargeMarginBottom"/>
 
     </VBox>

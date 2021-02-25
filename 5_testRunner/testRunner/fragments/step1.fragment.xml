@@ -11,11 +11,13 @@
         <MessageStrip text="The setTimeout(function(){}, 3000); function let's the test script wait for 3000 microseconds - 3 seconds before continuing, this is to enable the workflow to catch up. " class="sapUiTinyMarginBottom" showIcon="true" type="Information" />
         <Text text="2. Duplicate the already created Claim request" class="sapUiTinyMarginBottom" />
         <Image src="./assets/duplicate.PNG" class="sapUiTinyMarginBottom"/>
-        <Text text="2. Replace the content of the body tab with the code below" class="sapUiTinyMarginBottom" />
+        <Text text="2. Name it Submit Clain, replace the content of the body tab with the code below" class="sapUiTinyMarginBottom" />
         <code:CodeEditor editable="false"
 	value="{/code}"
 	height="400px" />
-        <Text text="3. Create an additional request named logout as a GET request and add the following URL 'https://myhr-dev.health.qld.gov.au/sap/public/bc/icf/logoff?sap-client=120'" class="sapUiTinyMarginBottom"/>
+	<Text text="3. Go to the test tab and change the timeout from 3000 to 10000 in this request only" class="sapUiTinyMarginBottom" />
+
+        <Text text="4. Create an additional request named logout as a GET request and add the following URL 'https://myhr-dev.health.qld.gov.au/sap/public/bc/icf/logoff?sap-client=120'" class="sapUiTinyMarginBottom"/>
         <Text text="What does that test created in step 1 do? (More than one answer is correct)" class="sapUiTinyMarginBottom" />
         <CheckBox id="1" text="Checks to see if the work item is filled out"  />
         <CheckBox id="2" text="Adds the guid as a collection variable" />
